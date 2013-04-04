@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Victory Boogie Woogie</title>
+	<link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
+
+	<script type="text/javascript" src="javascript/lib/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="javascript/lib/headtrackr.js"></script>
+	
+	<script type="text/javascript" src="javascript/painting_structure.js"></script>
+	<script type="text/javascript" src="javascript/painting_loader.js"></script>
+	<script type="text/javascript" src="javascript/canvas_painting_renderer.js"></script>
+	<script type="text/javascript" src="javascript/mouse_movement_detector.js"></script>
+	<script type="text/javascript" src="javascript/movement_detector.js"></script>
+	<script type="text/javascript" src="javascript/head_movement_detector.js"></script>
+	<script type="text/javascript" src="javascript/victory_boogie_woogie.js"></script>
+</head>
+
+<body>
+
+<div id="siteBackground">
+	<div id="paintingContainer"></div>
+</div>
+
+<div>
+	<video id="webcam" autoplay="autoplay" width="160" height="120" style="display: none;"></video>
+	<canvas id="inputSource" width="160" height="120" style="display: none;"></canvas>
+	<canvas id="inputBlend" width="160" height="120" style="display: none;"></canvas>
+</div>
+
+<script type="text/javascript">
+	var victoryBoogieWoogie = new VictoryBoogieWoogie('paintingContainer');
+
+	$(document).ready(function() {
+		victoryBoogieWoogie.showPainting('data/victory_boogie_woogie_block_data.csv', 
+				'data/underlying_line_data.csv');
+	});
+</script>
+
+</body>
+</html>

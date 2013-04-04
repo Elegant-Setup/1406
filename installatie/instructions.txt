@@ -1,0 +1,9 @@
+requirements:
+- Webserver
+- Computer with a webcam and Google Chrome Installed
+
+1. Copy paste contents of the foler "vbw_source_20130306" into the WWW folder of a webserver
+2. Open Google Chrome
+3. Go to http://[you server adres]/source
+
+For more information about the artwork read the readme.txt
